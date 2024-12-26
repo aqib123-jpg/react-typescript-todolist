@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "ES5",                       // Specifies ECMAScript target version.
+      "lib": ["DOM", "DOM.Iterable", "ESNext"], // Includes libraries for browser and ESNext features.
+      "allowJs": true,                      // Allows JavaScript files to be compiled.
+      "skipLibCheck": true,                 // Skips type checking for declaration files to improve build time.
+      "strict": true,                       // Enables all strict type-checking options.
+      "forceConsistentCasingInFileNames": true, // Enforces consistent file casing.
+      "noEmit": true,                       // Prevents TypeScript from emitting compiled files.
+      "esModuleInterop": true,              // Allows default imports for CommonJS modules.
+      "module": "ESNext",                   // Sets the module code generation to use ES modules.
+      "moduleResolution": "Node",          // Resolves modules like Node.js.
+      "resolveJsonModule": true,           // Allows importing JSON files.
+      "isolatedModules": true,             // Ensures each file is treated as a separate module.
+      "jsx": "react-jsx"                   // Specifies JSX factory for React (new JSX transform).
+    },
+    "include": ["src"],                    // Files or directories included in the compilation.
+    "exclude": ["node_modules"]            // Files or directories excluded from the compilation.
+  }
+  
