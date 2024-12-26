@@ -1,19 +1,18 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header.tsx';
+import InputBox from './components/InputBox.tsx';
+import OnGoing from './components/OnGoing.tsx';
 
-function App() {
+
+const App : React.FC = () => {
   return (
-    <div className="App">
-      <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='h-[100vh] bg-[#9333ea] text-white'>
+      <Header/>
+      <InputBox/>
+      <OnGoing/>
     </div>
-  );
+  )
 }
 
 export default App;

@@ -12,7 +12,7 @@
       "moduleResolution": "Node",          // Resolves modules like Node.js.
       "resolveJsonModule": true,           // Allows importing JSON files.
       "isolatedModules": true,             // Ensures each file is treated as a separate module.
-      "jsx": "react-jsx"                   // Specifies JSX factory for React (new JSX transform).
+      "jsx": "react-jsx"  
     },
     "include": ["src"],                    // Files or directories included in the compilation.
     "exclude": ["node_modules"]            // Files or directories excluded from the compilation.
