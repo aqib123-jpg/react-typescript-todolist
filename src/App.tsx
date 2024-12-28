@@ -4,19 +4,24 @@ import './App.css';
 import Header from './components/Header.tsx';
 import InputBox from './components/InputBox.tsx';
 import OnGoing from './components/OnGoing.tsx';
+import { ReactFlowProvider } from 'reactflow';
+
+//project on portfolio i.e todo list
+
+const App : React.FC = () => {
+  return (
+    <div className='h-[100vh] bg-[#9333ea] text-white'>
+      <Header/>
+      <InputBox/>
+      <OnGoing/>
+    </div>
+  )
+}
+
+export default App;
 
 
-// const App : React.FC = () => {
-//   return (
-//     <div className='h-[100vh] bg-[#9333ea] text-white'>
-//       <Header/>
-//       <InputBox/>
-//       <OnGoing/>
-//     </div>
-//   )
-// }
-
-// export default App;
+//project on portfolio i.e todo list
 
 
 
@@ -85,59 +90,63 @@ import OnGoing from './components/OnGoing.tsx';
 
 
 
-const App : React.FC = () => {
-  interface myInterface{
-    id : number,
-    item: string
-  }
-  const [items,setItems]=useState<myInterface[]>([
-    {id:1 , item: 'one'},
-    {id:2 , item: 'two'},
-    {id:3 , item: 'three'},
-    {id:4 , item: 'four'},
-    {id:5 , item: 'five'}
-  ]);
-  const [dropItems,setDropItems]=useState<myInterface[]>([]);
+// const App : React.FC = () => {
+//   interface myInterface{
+//     id : number,
+//     item: string
+//   }
+//   const [items,setItems]=useState<myInterface[]>([
+//     {id:1 , item: 'one'},
+//     {id:2 , item: 'two'},
+//     {id:3 , item: 'three'},
+//     {id:4 , item: 'four'},
+//     {id:5 , item: 'five'}
+//   ]);
+//   const [dropItems,setDropItems]=useState<myInterface[]>([]);
 
-  const draggingProduct = (e:React.DragEvent<HTMLDivElement>,items:myInterface) : void => {
-   e.dataTransfer.setData('dragId',items.id.toString()); 
-  }
-  const handleDrop = (e:React.DragEvent<HTMLDivElement>) : void => {
-    e.preventDefault();
-    const itemId = e.dataTransfer.getData("dragId");
-    const item = items.find((item) => item.id.toString() === itemId);
-    if (item) {
-      setDropItems((prevItems) => [...prevItems, item]);
-    }
-  }
-  return (
-    <div className='text-center'>
-      <h3 >Learning Drag And Drop Items </h3>
-      <div className='bg-blue-300'>
-        <h4>Drag From Here</h4>
-        {
-          (items).map((data) => 
-          (
-            <div key={data.id} draggable onDragStart={(e) => draggingProduct(e,data)}
-            >{data.item}</div>
-          )
-          )
-        }
-      </div>
-      <div onDrop={handleDrop} onDragOver={(e) => e.preventDefault()} className='bg-yellow-400 h-[50vh]'>
-        <h4>Drop Here</h4>
-        {
-          (dropItems).map((data) => 
-          (
-            <div key={data.id} draggable onDragStart={(e) => draggingProduct(e,data)}
-            >{data.item}</div>
-          )
-          )
-        }
-      </div>
-    </div>
-  )
-}
+//   const draggingProduct = (e:React.DragEvent<HTMLDivElement>,items:myInterface) : void => {
+//    e.dataTransfer.setData('dragId',items.id.toString()); 
+//   }
+//   const handleDrop = (e:React.DragEvent<HTMLDivElement>) : void => {
+//     e.preventDefault();
+//     const itemId = e.dataTransfer.getData("dragId");
+//     const item = items.find((item) => item.id.toString() === itemId);
+//     if (item) {
+//       setDropItems((prevItems) => [...prevItems, item]);
+//     }
+//   }
+//   return (
+//     <div className='text-center'>
+//       <h3 >Learning Drag And Drop Items </h3>
+//       <div className='bg-blue-300'>
+//         <h4>Drag From Here</h4>
+//         {
+//           (items).map((data) => 
+//           (
+//             <div key={data.id} draggable onDragStart={(e) => draggingProduct(e,data)}
+//             >{data.item}</div>
+//           )
+//           )
+//         }
+//       </div>
+//       <div onDrop={handleDrop} onDragOver={(e) => e.preventDefault()} className='bg-yellow-400 h-[50vh]'>
+//         <h4>Drop Here</h4>
+//         {
+//           (dropItems).map((data) => 
+//           (
+//             <div key={data.id} draggable onDragStart={(e) => draggingProduct(e,data)}
+//             >{data.item}</div>
+//           )
+//           )
+//         }
+//       </div>
+//     </div>
+//   )
+// }
 
 
-export default App
+// export default App
+
+
+
+
