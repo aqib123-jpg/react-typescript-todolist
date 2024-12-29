@@ -7,7 +7,7 @@ import OnGoing from './components/OnGoing.tsx';
 import { ReactFlowProvider } from 'reactflow';
 
 //project on portfolio i.e todo list
-
+//just a simple comment
 const App : React.FC = () => {
   return (
     <div className='h-[100vh] bg-[#9333ea] text-white'>
