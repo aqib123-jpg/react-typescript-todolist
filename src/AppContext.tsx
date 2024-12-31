@@ -33,7 +33,6 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   );
 };
 
-// Create a custom hook for accessing the context
 export const useAppContext = () => {
   const context = useContext(AppContext);
   if (!context) {
