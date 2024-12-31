@@ -48,11 +48,11 @@ const OnGoing: React.FC = () => {
         <div className="flex w-[100vw] justify-center my-3">
             <div className="w-[80vw] grid md:grid-cols-2 grid-cols-1 gap-2">
                 <div>
-                  <h1 className="bg-[#8b5cf6] py-3 text-center text-2xl font-body">Pending</h1>
+                  <h1 className="bg-[#581c87] py-3 text-center text-2xl font-body">Pending</h1>
                   {arr.map((data, index) => (
                       <h1
                           key={index}
-                          className="bg-[#581c87] my-2 h-12 flex items-center px-2 cursor-grab"
+                          className="bg-[#8b5cf6]  my-2 h-12 flex items-center px-2 cursor-grab"
                           draggable
                           onDragStart={(e) => draggingStart(e, index)}
                       >
@@ -78,9 +78,9 @@ const OnGoing: React.FC = () => {
                   ))}
               </div>
               <div onDragOver={(e) => dragOver(e)} onDrop={(e) => dropOver(e)} className="min-h-[70vh]">
-                  <h1 className="bg-[#8b5cf6] py-3 text-center text-2xl font-body">Completed</h1>
+                  <h1 className="bg-[#581c87] py-3 text-center text-2xl font-body">Completed</h1>
                   {completedArr.map((data, index) => (
-                      <h1 key={index} className="bg-[#581c87] my-2 h-12 flex items-center px-2">
+                      <h1 key={index} className="bg-[#8b5cf6]  my-2 h-12 flex items-center px-2">
                           <span className="font-handwriting break-words overflow-hidden w-4/5">
                               {data}
                           </span>
