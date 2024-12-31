@@ -56,7 +56,7 @@ const OnGoing: React.FC = () => {
                           draggable
                           onDragStart={(e) => draggingStart(e, index)}
                       >
-                          <span className="font-handwriting break-words overflow-hidden w-3/4">
+                          <span className="font-handwriting break-words overflow-hidden w-3/4 text-xl">
                               {data}
                           </span>
                           <div className="flex justify-between w-1/4 text-2xl">
@@ -77,7 +77,7 @@ const OnGoing: React.FC = () => {
                       </h1>
                   ))}
               </div>
-              <div onDragOver={(e) => dragOver(e)} onDrop={(e) => dropOver(e)} className="min-h-[70vh]">
+              <div onDragOver={(e) => dragOver(e)} onDrop={(e) => dropOver(e)} className="min-h-[70vh] border-2 border-red-600">
                   <h1 className="bg-[#581c87] py-3 text-center text-2xl font-body">Completed</h1>
                   {completedArr.map((data, index) => (
                       <h1 key={index} className="bg-[#7e22ce]  my-2 h-12 flex items-center px-2">
