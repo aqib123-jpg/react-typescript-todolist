@@ -20,7 +20,7 @@ const OnGoing: React.FC = () => {
     updateArr(updatedArr);
   };
 
-  // Handle task completion
+  // Handle task comment
   const finishTask = (index: number): void => {
     const task = arr[index];
     updateCompletedArr([...completedArr, task]);
